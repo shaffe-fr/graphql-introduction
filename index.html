@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Introduction à Docker</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>GraphQL</h1>
+				<h3>Le futur des APIs est déjà là !</h3>
+				<p>
+					<small>Par
+						<a href="https://www.github.com/shaffe-fr" target="_blank">Karel Faille</a> /
+						<a href="http://twitter.com/shaffe">@shaffe</a>
+					</small>
+				</p>
+			</section>
+			<section>
+				<h2>About me</h2>
+				<ul>
+					<li>Lead développeur chez Septime Création</li>
+					<li>Développeur frontend &amp; backend PHP/JavaScript</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Sommaire</h2>
+				<ol>
+					<li>Historique</li>
+					<li>Etat des lieux</li>
+					<li>Principes</li>
+					<li>Cas pratiques</li>
+					<li>Conclusion</li>
+				</ol>
+			</section>
+			<section>
+				<h2>Historique des APIs</h2>
+				<ul>
+					<li>Interfaces CGI</li>
+					<li>Web services SOAP</li>
+					<li>Web services REST</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Etat des lieux</h2>
+				<ul>
+					<li>Peu adapté aux structures complexes</li>
+					<li>Peu documentée (endpoint, paramètres, résultats)</li>
+					<li></li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Principes</h2>
+					<ul>
+						<li>Schéma</li>
+						<li>Requêtes</li>
+						<li>Mutations</li>
+						<li>Souscriptions</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Schéma fortement typé</h2>
+					<ul>
+						<li>Types, opérations...</li>
+						<li>Erreurs explicites</li>
+						<li>Documentation automatique</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Requêtes</h2>
+					<ul>
+						<li>Récupération les champs requis uniquement</li>
+						<li>Alias des propriétés</li>
+						<li>Utilisation de paramètres</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Mutations</h2>
+					<ul>
+						<li>Défini les opérations possibles</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Souscriptions</h2>
+					<ul>
+						<li>Mise à jour en temps réel</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<h2>Conclusion</h2>
+				<ul>
+					<li>Utilisé en production</li>
+					<li>Une API pour les gouvernées toutes</li>
+					<li>S'adapte au front-end</li>
+					<li>Libraires tierces</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script defer>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			history: true,
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'http://localhost:3001/socket.io/socket.io.js',
+					async: true
+				},
+				{
+					src: 'plugin/remote-control/remote.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function callback() {
+						window.hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>
